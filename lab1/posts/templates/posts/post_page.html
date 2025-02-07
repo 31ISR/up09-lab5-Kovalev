@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{ post.title }} - Post Detail
+{% endblock %}
+
+{% block content %}
+    <main class="container mt-5">
+        <section class="text-center">
+            <img class="banner img-fluid rounded mb-4" src="{{ post.banner.url }}" alt="{{ post.title }}" />
+            <h1 class="display-4">{{ post.title }}</h1>
+            <p class="lead text-muted">{{ post.date }}</p>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="card-text">{{ post.body }}</p>
+                    <p class="text-muted">Автор: {{ post.author }}</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+{% endblock %}
